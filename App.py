@@ -1,13 +1,12 @@
-from Models.Wallet import *
+from Models import Wallet, User
 
 wallet = Wallet()
 
-wallet.deposit(100)
-wallet.show_total()
-wallet.deposit(150)
-wallet.show_total()
-wallet.deposit(70)
-wallet.show_total()
-wallet.withdraw(30)
-wallet.show_total()
+adam = User("Adam")
+kasia = User("Kasia")
 
+wallet.deposit(adam, 500)
+wallet.deposit(kasia, 500)
+wallet.withdraw(kasia, 200)
+wallet.show_total()
+wallet.show_operations()
